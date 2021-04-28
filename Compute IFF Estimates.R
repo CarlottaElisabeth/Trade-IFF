@@ -404,10 +404,10 @@ panel <- panel %>%
   mutate_at(vars(reporter.ISO, partner.ISO, year),
             funs(as.factor(.)))
 
-FE_M.out <- felm(M_dist ~ 0| reporter.ISO + partner.ISO + year,
-                 data = panel)
-FE_M <- getfe(FE_M.out, se = T)
-save(FE_M, file = "Results/FE_M.Rdata")
+# FE_M.out <- felm(M_dist ~ 0| reporter.ISO + partner.ISO + year,
+#                  data = panel)
+# FE_M <- getfe(FE_M.out, se = T)
+# save(FE_M, file = "Results/FE_M.Rdata")
 
 # FE_X.out <- felm(X_dist ~ 0| reporter.ISO + partner.ISO + year,
 #                  data = panel)
